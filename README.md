@@ -1,2 +1,2 @@
 # resources
-All outdata articles source code
+Visit our website: https://theoutdata.com/article/ to find the relevant explanation for the source code in this repo.
