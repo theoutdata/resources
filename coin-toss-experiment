@@ -1,0 +1,25 @@
+#Preamble
+import numpy as np
+import seaborn as sns
+import pandas as pd
+import random
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+n=21
+p=0.5
+# let us repeat our experiment for 1000 times
+size=10000
+x=np.random.binomial(n=n, p=p, size=size)
+probs_100 = [np.equal(x,i).mean() for i in range(n)]
+print(probs_100)
+
+plt.style.use(['seaborn'])
+plt.xticks(range(n))
+plt.plot(list(range(n)), probs_100, color='blue', marker='o')
+plt.xlabel('Number of Heads',fontsize=14)
+plt.ylabel('Probability',fontsize=14)
+
+plt.axvline(x=17, color='r')
+plt.axvline(x=3, color='r')
+plt.axvline(x=19, color='g')
